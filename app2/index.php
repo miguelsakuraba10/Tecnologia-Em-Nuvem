@@ -19,4 +19,19 @@
 
     <input type="submit" value="Enviar">
   </form>
+
+  <?php
+  if($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Coleta os dados do formulário
+    $nome = htmlspecialchars($_POST["nome"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $mensagem = htmlspecialchars($_POST["mensagem"]);
+
+    // Exibe os dados (em uma aplicação real, voce poderia salvar ou enviar por email)
+    echo "<h2>Dados Recebidos:</h2>";
+    echo "<p><strong>Nome: </strong> $nome</p>";
+    echo "<p><strong>Email: </strong> $email</p>";
+    echo "<p><strong>Mensagem: </strong> $mensagem</p>";
+  }
+  ?>
 </body>
