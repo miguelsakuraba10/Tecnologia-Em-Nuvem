@@ -25,4 +25,7 @@ Run echo '<Directory /var/www/html>' >> /etc/apache2/apache2.conf && \
     echo '</Directory>' >> /etc/apache2/apache2.conf
 
 # Expõe a porta corretamente
+EXPOSE ${PORT}
+
+# Inicia o Apache
 CMD ["apache2-foreground"]
