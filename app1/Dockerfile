@@ -19,9 +19,9 @@ RUN sed -i "s/Listen 80/Listen ${PORT}/" /etc/apache2/ports.conf && \
 
 # Permite acesso ao diretório
 RUN echo '<Directory /var/www/html>' >> /etc/apache2/apache2.conf && \
-    echo 'Options Indexes FollowSymLinks' >> /etc/apache2/apache2.conf && \
-    echo 'AllowOverride All' >> /etc/apache2/apache2.conf && \
-    echo 'Require All granted' >> /etc/apache2/apache2.conf && \
+    echo '    Options Indexes FollowSymLinks' >> /etc/apache2/apache2.conf && \
+    echo '    AllowOverride All' >> /etc/apache2/apache2.conf && \
+    echo '    Require All granted' >> /etc/apache2/apache2.conf && \
     echo '</Directory>' >> /etc/apache2/apache2.conf
 
 # Expõe a porta corretamente
